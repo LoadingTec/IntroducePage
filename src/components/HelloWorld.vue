@@ -4,7 +4,8 @@
       :source="url"
       style="height: 100vh; width: 100vw"
       @download="handleDownload"
-      :filename="msg"
+      :filename="fileName"
+      :loading-text="loadingText"
     />
   </div>
 </template>
@@ -21,7 +22,9 @@ export default {
   },
   data() {
     return {
-      url: 'https://raw.githubusercontent.com/LoadingTec/IntroducePage/main/docs/锣鼎科技量化业务简介.pdf'
+      url: '锣鼎科技量化业务简介.pdf',
+      loadingText:'加载文件中......',
+      fileName:'锣鼎科技量化业务简介'
     }
   }
 }
