@@ -6,6 +6,7 @@
       @download="handleDownload"
       :filename="fileName"
       :loading-text="loadingText"
+      :rendering-text="renderingText"
     />
   </div>
 </template>
@@ -24,7 +25,8 @@ export default {
     return {
       url: '锣鼎科技量化业务简介.pdf',
       loadingText:'加载文件中......',
-      fileName:'锣鼎科技量化业务简介'
+      fileName:'锣鼎科技量化业务简介',
+      renderingText:'正在为您加速渲染中......'
     }
   }
 }
