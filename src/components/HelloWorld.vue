@@ -1,18 +1,28 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      现货/ 合约  --> 历史回测  --> 量化策略 --> 历史收益<br>
-      <a href="https://introducepage.pages.dev/" target="_blank" rel="noopener">原始链接地址</a>.
-    </p>
+  <div>
+    <PDFViewer
+      :source="url"
+      style="height: 100vh; width: 100vw"
+      @download="handleDownload"
+      :filename="msg"
+    />
   </div>
 </template>
 
 <script>
+import PDFViewer from 'pdf-viewer-vue'
 export default {
   name: 'HelloWorld',
+  components: {
+    PDFViewer,
+  },
   props: {
     msg: String
+  },
+  data() {
+    return {
+      url: 'https://raw.githubusercontent.com/LoadingTec/IntroducePage/main/docs/锣鼎科技量化业务简介.pdf'
+    }
   }
 }
 </script>
