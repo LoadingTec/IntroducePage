@@ -22,4 +22,8 @@ export default {
   color: #2c3e50;
   /* margin-top: 60px; */
 }
+body {
+  margin: 0px;
+  border: 0px;
+}
 </style>
